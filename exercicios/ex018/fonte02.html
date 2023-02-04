@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        /*
+            Tipos de format()
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - trutype-aat (Apple Advanced Typegraphy)
+            - svg
+        */
+        @font-face {
+            font-family: 'Love Larry';
+            src: url('fonts/love larry.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Love Lady';
+            src: url('fonts/love lady.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Love Lady', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, Wolrd!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, minus ipsa. Magni, laudantium aliquam explicabo officia suscipit quia dolor atque praesentium numquam cumque tempore omnis. Tempore libero dicta alias obcaecati?</p>
+</body>
+</html>
