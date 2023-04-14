@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>População dos Estados</title>
+    <title>Tabelas Grandes</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        p {
+            text-align: justify;
+            line-height: 1.5em;
+            text-indent: 50px;
+        }
+
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            background-color: lightskyblue;
+            color: black;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 10px;
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: darkcyan;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: darkcyan;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightskyblue;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n + 1 */
+            background-color: white;
         }
 
         td, th {
@@ -25,14 +54,28 @@
             padding: 10px;
         }
 
+        th#populacao {
+            width: 100px;
+        }
+
         td.num {
             text-align: right;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 50px;
+            text-indent: 0px;
         }
 
     </style>
 </head>
 <body>
-    <h1>Lista de unidades federativas do Brasil por população</h1>
+    <h1>Tabelas Grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
@@ -44,27 +87,24 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" id="populacao">População</th>
             </tr>
         </thead>
-        <tfoot>
-            <th>Total de Habitantes</th>
-            <td class="num"><strong>207 319 536</strong></td>
-        </tfoot>
         <tbody>
             <tr>
                 <td>São Paulo</td>
                 <td class="num">46 024 937</td>
             </tr>
             <tr>
-                <td> Minas Gerais</td>
+                <td>Minas Gerais</td>
                 <td class="num">20 732 660</td>
             </tr>
             <tr>
-                <td> Rio de Janeiro</td>
+                <td>Rio de Janeiro</td>
                 <td class="num">16 615 526</td>
             </tr>
             <tr>
@@ -72,7 +112,7 @@
                 <td class="num">14 659 023</td>
             </tr>
             <tr>
-                <td> Paraná</td>
+                <td>Paraná</td>
                 <td class="num">11 835 379</td>
             </tr>
             <tr>
@@ -80,11 +120,11 @@
                 <td class="num">11 088 065</td>
             </tr>
             <tr>
-                <td> Pernambuco</td>
+                <td>Pernambuco</td>
                 <td class="num">9 051 113</td>
             </tr>
             <tr>
-                <td> Ceará</td>
+                <td>Ceará</td>
                 <td class="num">8 936 431</td>
             </tr>
             <tr>
@@ -92,55 +132,55 @@
                 <td class="num">8 442 962</td>
             </tr>
             <tr>
-                <td> Santa Catarina</td>
+                <td>Santa Catarina</td>
                 <td class="num">7 762 154</td>
             </tr>
             <tr>
-                <td> Goiás</td>
-                <td class="num">6 950 976	</td>
+                <td>Goiás</td>
+                <td class="num">6 950 976</td>
             </tr>
             <tr>
                 <td>Maranhão</td>
-                <td class="num">6 800 605	</td>
+                <td class="num">6 800 605</td>
             </tr>
             <tr>
-                <td> Espírito Santo</td>
+                <td>Espírito Santo</td>
                 <td class="num">4 108 508</td>
             </tr>
             <tr>
-                <td> Paraíba</td>
+                <td>Paraíba</td>
                 <td class="num">4 030 961</td>
             </tr>
             <tr>
-                <td> Amazonas</td>
+                <td>Amazonas</td>
                 <td class="num">3 952 262</td>
             </tr>
             <tr>
-                <td> Mato Grosso</td>
-                <td class="num">3 784 239	</td>
+                <td>Mato Grosso</td>
+                <td class="num">3 784 239</td>
             </tr>
             <tr>
                 <td>Rio Grande do Norte</td>
                 <td class="num">3 303 953</td>
             </tr>
             <tr>
-                <td> Piauí</td>
+                <td>Piauí</td>
                 <td class="num">3 270 174</td>
             </tr>
             <tr>
-                <td> Alagoas	</td>
+                <td>Alagoas</td>
                 <td class="num">3 125 254</td>
             </tr>
             <tr>
-                <td> Distrito Federal</td>
+                <td>Distrito Federal</td>
                 <td class="num">2 923 369</td>
             </tr>
             <tr>
-                <td> Mato Grosso do Sul</td>
+                <td>Mato Grosso do Sul</td>
                 <td class="num">2 833 742</td>
             </tr>
             <tr>
-                <td> Sergipe</td>
+                <td>Sergipe</td>
                 <td class="num">2 211 868</td>
             </tr>
             <tr>
@@ -148,15 +188,15 @@
                 <td class="num">1 616 379</td>
             </tr>
             <tr>
-                <td> Tocantins</td>
+                <td>Tocantins</td>
                 <td class="num">1 584 306</td>
             </tr>
             <tr>
-                <td> Acre</td>
+                <td>Acre</td>
                 <td class="num">829 780</td>
             </tr>
             <tr>
-                <td> Amapá</td>
+                <td>Amapá</td>
                 <td class="num">774 268</td>
             </tr>
             <tr>
@@ -164,6 +204,39 @@
                 <td class="num">634 805</td>
             </tr>
         </tbody>
+        <tfoot>
+            <th scope="row">Total de Habitantes</th>
+            <td class="num"><strong>207 319 536</strong></td>
+        </tfoot>
     </table>
+    <p>
+        As tabelas em HTML são uma ótima maneira de exibir informações de maneira organizada e estruturada em uma página da web. As tabelas consistem em linhas e colunas, que podem ser usadas para exibir uma variedade de informações, desde dados financeiros até horários de aulas.
+    </p>
+
+    <p>
+        Para criar uma tabela em HTML, você deve usar as tags &lt;table&gt;, &lt;tr&gt;, &lt;td&gt; e &lt;th&gt;. A tag &lt;table&gt; é usada para definir a tabela, enquanto a tag &lt;tr&gt; é usada para definir uma linha. As tags &lt;td&gt; e &lt;th&gt; são usadas para definir células em uma tabela. A diferença entre elas é que as células &lt;th&gt; são usadas para cabeçalhos de coluna e linha, enquanto as células &lt;td&gt; são usadas para dados.
+    </p>
+
+    <p>
+        Embora as tabelas possam ser uma ótima maneira de exibir informações em uma página da web, é importante lembrar que o uso excessivo de tabelas pode tornar o layout da página confuso e difícil de ler. Por isso, é recomendável usar tabelas com moderação e procurar outras formas de exibir informações, como listas ou gráficos, sempre que possível.
+    </p>
+
+    <p>
+        Além disso, é possível usar atributos para personalizar ainda mais as tabelas em HTML. Por exemplo, você pode usar o atributo "colspan" para mesclar células em uma única célula em uma linha e o atributo "rowspan" para mesclar células em uma única célula em uma coluna.
+    </p>
+
+    <p>
+        Outra coisa importante a se considerar ao trabalhar com tabelas em HTML é a acessibilidade. É importante lembrar que nem todos os usuários têm a mesma capacidade de enxergar ou interagir com a página da web da mesma maneira. Por isso, é fundamental usar técnicas como rótulos descritivos e texto alternativo para tornar as tabelas mais acessíveis a todos os usuários, incluindo aqueles que usam leitores de tela ou têm outras necessidades especiais. Com algumas práticas simples de acessibilidade, é possível tornar as tabelas em HTML mais inclusivas e acessíveis a todos os usuários.
+    </p>
+
+    <p>
+        Em resumo, as tabelas em HTML são uma ferramenta poderosa para exibir informações de maneira organizada e estruturada em uma página da web. Ao usar as tags e atributos corretos, você pode criar tabelas personalizadas que se adaptem às suas necessidades. No entanto, é importante usar as tabelas com moderação e sempre procurar outras formas de exibir informações para garantir a melhor experiência do usuário possível.
+    </p>
+    
+    <footer>
+        <p>
+            Este texto foi gerado por uma inteligência artificial usando a tecnologia GPT-3.5 da OpenAI.
+        </p>
+    </footer>
 </body>
 </html>
